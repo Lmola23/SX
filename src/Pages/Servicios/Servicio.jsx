@@ -2,11 +2,22 @@ import TargeServicio from './../../Componentes/TargetaServicio/TargetaServicio.j
 import './../../Style/fonts.css';
 import Img from './../../Utiles/imgService.js';
 import './Servicio.css';
-import ServicioIntro from './../../Componentes/ServicioIntro/servicioIntro.jsx';
+import SectionIntro from './../../Componentes/SectionIntro/sectionIntro.jsx';
+import ImgIncial from './../../assets/ServicioImg/ImgPresentServicio.png';
+
 export default function Servicio() {
   return (
-    <>
-      <ServicioIntro />
+
+    <div className='containerServicioSection'>
+
+      <SectionIntro
+        title="Realza tu Belleza con Nuestros Tratamientos Exclusivos"
+        textIntro="En  Salón Xanadu , combinamos técnicas innovadoras con un toque personalizado
+          para brindarte una experiencia única. Descubre nuestros servicios diseñados para hacerte brillar
+          en cada ocasión."
+        ImgIntro={ImgIncial}
+
+      />
       <TargeServicio
         Title="Limpieza Facial Profunda"
         Img={Img.limpiezaFacialProfunda}
@@ -25,6 +36,8 @@ export default function Servicio() {
             'Salud y bienestar']}
         ImgBeneficio={Img.limpiezafacialprofundaBeneficio}
       />
-    </>
+    </div>
+
+
   );
 }

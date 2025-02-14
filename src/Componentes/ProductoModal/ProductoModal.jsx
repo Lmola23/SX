@@ -41,8 +41,8 @@ const ProductGrid = ({ products }) => {
               <div className="product-details">
                 <img src={selectedProduct.image} alt={selectedProduct.name} className="product-image" />
                 <div className="details-text">
-                  <h2>{selectedProduct.name}</h2>
-                  <p style={{ fontFamily: "sans-serif" }} className="price">{selectedProduct.price}</p>
+                  <h2 style={{ fontStyle: "italic" }}>{selectedProduct.name}</h2>
+                  <p className="priceProduct">{selectedProduct.price}</p>
                   <p>{selectedProduct.description}</p>
                   <ul className="descriptionBeneficioProduct">
                     {selectedProduct.Beneficio.map((beneficio, index) => (
