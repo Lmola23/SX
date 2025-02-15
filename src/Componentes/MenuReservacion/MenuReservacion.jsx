@@ -46,12 +46,12 @@ const AppointmentPicker = () => {
       <h2 style={{ textAlign: "center", fontWeight: "bold" }}>Selecciona el Día</h2>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <button style={{ marginLeft: "4vh" }} onClick={() => handleMonthChange(-1)} disabled={currentDate.getMonth() === today.getMonth()}>◀</button>
-        <span>{currentMonthName}</span>
+        <span style={{ marginRight: "4vh", marginLeft: "4vh", fontSize: "2.5vh" }}>{currentMonthName}</span>
         <button style={{ marginRight: "4vh" }} onClick={() => handleMonthChange(1)} disabled={currentDate.getMonth() === today.getMonth() + 1}>▶</button>
       </div>
       <div className="containerCalendario" style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", textAlign: "center", marginTop: "10px" }}>
         {weekDays.map((day, index) => (
-          <div key={index} style={{ fontWeight: "bold" }}>{day}</div>
+          <div key={index} style={{ fontWeight: "bold", fontStyle: "italic" }}>{day}</div>
         ))}
         {Array.from({ length: daysInMonth }, (_, i) => i + 1).map((day) => {
           const dateToCheck = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
@@ -73,7 +73,7 @@ const AppointmentPicker = () => {
           );
         })}
       </div>
-      <h3 style={{ marginTop: "20px" }}>Selecciona la Hora</h3>
+      <h3 style={{ marginTop: "20px", fontStyle: "italic" }}>Selecciona la Hora</h3>
       <div style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
         {times.map((time) => (
           <button
@@ -91,7 +91,7 @@ const AppointmentPicker = () => {
         {services.map((service) => (
           <button
             key={service}
-            style={{ padding: "8px", borderRadius: "5px", border: "1px solid", borderColor: selectedServices.includes(service) ? "red" : "#ddd", color: selectedServices.includes(service) ? "red" : "black" }}
+            style={{ padding: "8px", fontFamily: "Comorant", borderRadius: "5px", border: "1px solid", borderColor: selectedServices.includes(service) ? "red" : "#ddd", color: selectedServices.includes(service) ? "red" : "black" }}
             onClick={() => toggleService(service)}
           >
             {service}
