@@ -126,9 +126,8 @@ body.modal-open {
   display: flex;
   flex-direction: column;
   overflow: scroll;
-  background-image: url('./../../assets/HomeImg/fondoServicio.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  border: solid 2px #d63384;
+  border-radius: 20px;
 }
 
 .add-button {

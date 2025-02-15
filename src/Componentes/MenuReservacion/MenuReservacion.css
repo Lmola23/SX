@@ -1,0 +1,127 @@
+.containerMenuReservacion {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment-container {
+  width: 80%;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.appointment-header {
+  text-align: center;
+  font-weight: bold;
+}
+
+.month-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.calendar-button {
+  padding: 8px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.calendar-button.selected {
+  background-color: red;
+  color: white;
+}
+
+.calendar-button.unavailable {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.time-selector,
+.services-container,
+.person-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.button-option {
+  padding: 8px;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.button-option.selected {
+  border-color: red;
+  color: red;
+}
+
+.total-price {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.confirm-button {
+  width: 80%;
+  margin-top: 20px;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonDay {
+  margin: 0.5vh;
+  border-radius: 50%;
+  width: 6vh;
+  height: 6vh;
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  font-size: 2vh;
+  font-family: "Catamaran";
+
+}
+
+.butonTime {
+  font-family: "Catamaran";
+
+
+}
+
+.buttonConfirmarCita {
+  background-color: red;
+  width: 60%;
+  font-family: "Comorant";
+  font-weight: 800;
+  font-style: italic;
+  font-size: 2vh;
+  color: white;
+  padding: 10px;
+  border-Radius: 5px;
+  border: none;
+  margin: auto;
+  text-align: center;
+  margin-top: 3vh;
+}
