@@ -28,17 +28,19 @@ const AppointmentPicker = () => {
   };
 
   return (
-    <div className="containerMenuReservacion" style={{ width: "95%", margin: "auto", height: "auto", background: "white", fontFamily: "Comorant" }}>
+    <div className="containerMenuReservacion" style={{ background: "white", fontFamily: "Comorant" }}>
 
       <h2 style={{ textAlign: "center", fontWeight: "bold" }}>Selecciona el Día</h2>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <button onClick={() => setMonthOffset((prev) => Math.max(prev - 1, 0))}>◀</button>
+        <button style={{ marginLeft: "4vh" }} onClick={() => setMonthOffset((prev) => Math.max(prev - 1, 0))}>◀</button>
         <span>{new Date().toLocaleString('default', { month: 'long' })}</span>
-        <button onClick={() => setMonthOffset((prev) => (prev < 1 ? prev + 1 : prev))}>▶</button>
+        <button style={{ marginRight: "4vh" }} onClick={() => setMonthOffset((prev) => (prev < 1 ? prev + 1 : prev))}>▶</button>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", textAlign: "center", marginTop: "10px" }}>
+      <div className="containerCalendario" style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", textAlign: "center", marginTop: "10px" }}>
+
         {weekDays.map((day, index) => (
           <div key={index} style={{ fontWeight: "bold" }}>{day}</div>
+
         ))}
         {Array.from({ length: daysInMonth }, (_, i) => i + 1).map((day) => (
           <button
